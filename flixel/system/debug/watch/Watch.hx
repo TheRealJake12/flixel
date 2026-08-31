@@ -147,6 +147,7 @@ class WatchBase<TEntry:WatchEntry> extends Window
 
 	override function update():Void
 	{
+		if (!this.visible || !this.parent.visible) return;
 		for (entry in entries)
 		{
 			if (entriesContainer.isChildVisible(entry))
